@@ -10,8 +10,8 @@
 
 <script>
 
-  import Menu from "./Menu"
-  import Welcome from './Welcome'
+  import Menu from "../components/Menu"
+  import Welcome from '../components/Welcome'
   export default {
     name: "HomeScreen",
     components: {

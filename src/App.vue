@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import HomeScreen from './components/HomeScreen'
+import HomeScreen from './views/HomeScreen'
 
 export default {
   name: 'app',
