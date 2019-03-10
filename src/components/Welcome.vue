@@ -12,8 +12,11 @@
 
 <style scoped>
   .welcome {
+    position: relative;
     font-size: 40px;
-    width: 400px;
+    width: 800px;
     margin: auto;
+    top: calc(50% - 60px);
+    color: white;
   }
 </style>

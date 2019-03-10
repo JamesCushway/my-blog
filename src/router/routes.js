@@ -8,6 +8,7 @@ import HomeScreen from '../views/HomeScreen'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       name: 'Home',
@@ -16,12 +17,12 @@ export default new Router({
     },
     {
       name: 'Blogs',
-      path: '/',
+      path: '/blogs',
       component: BlogList,
     },
     {
       name: 'Topics',
-      path: '/',
+      path: '/topics',
       component: TopicList,
     },
   ]

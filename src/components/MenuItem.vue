@@ -1,5 +1,8 @@
 <template>
-  <div class="menu-item menu-item--white">{{text}}</div>
+  <router-link :to="{name: text}">
+    <div class="menu-item menu-item--white">{{text}}</div>
+  </router-link>
+
 </template>
 
 <script>

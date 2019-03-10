@@ -23,11 +23,11 @@
 
 <style scoped>
   .home-screen {
-    background-image: url(../assets/lake.jpg);
+    background-image: url(../assets/images/lake.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
+    height: 100vh;
     width: 100vw;
     z-index: -1;
     position: absolute;

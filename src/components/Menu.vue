@@ -12,8 +12,10 @@
     data () {
       return {
         pages: [
-          'One',
-          'Two',
+          'Home',
+          'Topics',
+          'Blogs',
+          'About Me',
         ]
       }
     }
