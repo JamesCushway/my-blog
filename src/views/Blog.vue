@@ -27,7 +27,7 @@
     },
     created () {
       this.blog = blog
-      this.blog.image = require(blog.image)
+      this.blog.image = require('../assets/images/travel.jpg')
     }
   }
 </script>

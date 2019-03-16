@@ -1,6 +1,6 @@
 <template>
   <div class="blog-snippet">
-    <router-link :to="'/blogs/' + blog.name">
+    <router-link :to="'/my-blog/blogs/' + blog.name">
       <div class="image-container">
         <img :src="imagePath"/>
       </div>
