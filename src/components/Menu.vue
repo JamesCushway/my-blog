@@ -24,10 +24,13 @@
 
 <style scoped>
 .menu {
-  position: relative;
-  display: inline-block;
-  left: 30px;
-  top: 20px;
+  display: block;
   float: left;
+  margin-right: 20px;
+  font-family: serendity;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
 }
 </style>

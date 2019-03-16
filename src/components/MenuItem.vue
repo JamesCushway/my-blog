@@ -23,7 +23,7 @@
   }
 
   .menu-item--white {
-    color: white;
+    color: black;
   }
 
 </style>

@@ -26,9 +26,10 @@
 <style scoped>
   .topic {
     width: 100%;
-    height: 100%;
+    height: 200px;
     border-radius: 10px;
     position: relative;
+    overflow: hidden;
   }
   .topic img {
     height: 100%;
@@ -58,6 +59,9 @@
   }
   .topic:hover img {
     filter: blur(3px) brightness(30%);
+    height: 110%;
+    width: 110%;
+    transform: translate(-5%, -5%);
   }
   .topic:hover .topic-text {
     font-size: 30px;
