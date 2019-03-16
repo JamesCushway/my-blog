@@ -42,6 +42,9 @@ export default new Router({
       path: '/my-blog/about-me',
       component: AboutMe,
     },
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  },
 })
 

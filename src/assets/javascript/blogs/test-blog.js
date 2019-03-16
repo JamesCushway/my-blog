@@ -1,5 +1,5 @@
 const blog = {
-  title: 'a test blog',
+  title: 'A test blog',
   description: 'A brief description about the blog.',
   date: '21st March 2019',
   image: '../../images/travel.jpg',

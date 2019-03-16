@@ -1,12 +1,10 @@
 <template>
   <div class="container">
-    <div class="blog-container">
+    <div class="blog-header">
       <div class="blog-title">
         {{blog.title}}
       </div>
-    </div>
-    <div class="blog-image">
-      <img :src="blog.image"/>
+      <img class="full-width blog-image" :src="blog.image"/>
     </div>
     <div class="blog blog-container">
       <div class="blog-paragraph" v-for="(paragraph, index) in blog.paragraphs" :key="index">
@@ -27,7 +25,7 @@
     },
     created () {
       this.blog = blog
-      this.blog.image = require('../assets/images/travel.jpg')
+      this.blog.image = require('../assets/images/blog.jpg')
     }
   }
 </script>
