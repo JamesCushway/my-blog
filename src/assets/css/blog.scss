@@ -1,0 +1,20 @@
+.blog-container {
+  width: 70%;
+  margin: auto;
+}
+
+.blog-title {
+  margin: 10px;
+  font-family: serendity;
+  font-size: 50px;
+  font-weight: 200;
+}
+
+.blog-image {
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: 60vh;
+  }
+}

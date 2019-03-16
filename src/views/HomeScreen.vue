@@ -1,7 +1,6 @@
 <template>
   <div style="background-color: whitesmoke">
     <div class="homescreen-image">
-      <span>The life and travels of a spontanious adventurer.</span>
       <img :src="image"/>
       <span>The Life and Travels of a Spontaneous Adventurer.</span>
     </div>
@@ -32,7 +31,6 @@
     width: 100%;
     height: 70vh;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
     position: relative;
 

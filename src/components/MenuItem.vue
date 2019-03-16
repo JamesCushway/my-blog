@@ -16,9 +16,8 @@
 
 <style scoped>
   .menu-item {
-    min-height: 20px;
     float: left;
-    margin: 10px;
+    margin: 0 10px;
     font-size: 20px;
   }
 

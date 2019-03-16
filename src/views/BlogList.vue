@@ -8,7 +8,7 @@
 </template>
 
 <script>
-  import BlogListSnippet from "../components/BlogListSnippet"
+  import BlogListSnippet from "../components/BlogSnippet"
   export default {
     name: "BlogList",
     components: {BlogListSnippet},

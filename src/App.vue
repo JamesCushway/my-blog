@@ -9,7 +9,7 @@
 
 <script>
 
-import Menu from "./components/Menu"
+import Menu from "./components/NavBar"
 export default {
   name: 'app',
   components: {Menu},
@@ -23,15 +23,12 @@ export default {
     src: url('./assets/fonts/serendity-script.woff'), url('./assets/fonts/serendity-script.woff') format('woff');
   }
   @font-face {
-    font-family: MontserratExtraLight;
+    font-family: Montserrat;
     src: url('./assets/fonts/Montserrat-ExtraLight.ttf'), url('./assets/fonts/Montserrat-ExtraLight.ttf') format('ttf');
   }
-  @font-face {
-    font-family: MontserratLight;
-    src: url('./assets/fonts/Montserrat-Light.ttf'), url('./assets/fonts/Montserrat-Light.ttf') format('ttf');
-  }
   #app {
-    font-family: MontserratExtraLight, Helvetica, sans-serif;
+    font-family: Montserrat, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
 
 </style>
