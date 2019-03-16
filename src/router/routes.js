@@ -14,32 +14,32 @@ export default new Router({
   routes: [
     {
       name: 'Home',
-      path: '/',
+      path: '/my-blog/',
       component: HomeScreen,
     },
     {
       name: 'Blogs',
-      path: '/blogs',
+      path: '/my-blog/blogs',
       component: BlogList,
     },
     {
       name: 'Blog',
-      path: '/blogs/:blog',
+      path: '/my-blog/blogs/:blog',
       component: Blog,
     },
     {
       name: 'Topics',
-      path: '/topics',
+      path: '/my-blog/topics',
       component: TopicList,
     },
     {
       name: 'Topic',
-      path: '/topics/topic',
+      path: '/my-blog/topics/topic',
       component: BlogList,
     },
     {
       name: 'About Me',
-      path: '/about-me',
+      path: '/my-blog/about-me',
       component: AboutMe,
     },
   ]
