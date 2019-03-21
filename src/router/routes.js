@@ -10,8 +10,7 @@ import AboutMe from '../views/AboutMe'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'hash',
-  base: 'my-blog',
+  mode: 'history',
   routes: [
     {
       name: 'Home',
