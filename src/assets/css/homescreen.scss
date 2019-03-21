@@ -1,0 +1,44 @@
+.homescreen-image {
+  height: 60vh;
+  z-index: 1;
+  position: relative;
+  margin-bottom: 20px;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 0;
+    position: relative;
+    filter: brightness(50%);
+  }
+
+  span {
+    font-family: serendity;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .homescreen-image {
+    object-fit: unset;
+    width: 100%;
+    height: auto;
+    span {
+      font-size: 26px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1360px) {
+  .homescreen-image {
+    span {
+      font-size: 30px;
+    }
+  }
+}

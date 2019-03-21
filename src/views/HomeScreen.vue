@@ -1,5 +1,5 @@
 <template>
-  <div style="background-color: whitesmoke">
+  <div>
     <div class="homescreen-image">
       <img :src="image"/>
       <span>The Life and Travels of a Spontaneous Adventurer.</span>
@@ -22,39 +22,13 @@
       return {
         image: require('../assets/images/lake.jpg')
       }
+    },
+    created() {
+      window.history.pushState({}, '', '/my-blog')
     }
   }
 </script>
 
 <style scoped lang="scss">
-  .homescreen-image {
-    width: 100%;
-    height: 70vh;
-    overflow: hidden;
-    z-index: 1;
-    position: relative;
-
-    img {
-      height: 100%;
-      width: 100%;
-      z-index: 0;
-      position: relative;
-      filter: brightness(50%);
-    }
-
-    span {
-      font-family: serendity;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-size: 30px;
-    }
-  }
-  .homescreen-blogs {
-    margin-top: 30px;
-  }
+  @import "../assets/css/homescreen";
 </style>

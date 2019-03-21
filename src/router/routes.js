@@ -10,36 +10,37 @@ import AboutMe from '../views/AboutMe'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  mode: 'hash',
+  base: 'my-blog',
   routes: [
     {
       name: 'Home',
-      path: '/my-blog/',
+      path: '/',
       component: HomeScreen,
     },
     {
       name: 'Blogs',
-      path: '/my-blog/blogs',
+      path: '/blogs',
       component: BlogList,
     },
     {
       name: 'Blog',
-      path: '/my-blog/blogs/:blog',
+      path: '/blogs/:blog',
       component: Blog,
     },
     {
       name: 'Topics',
-      path: '/my-blog/topics',
+      path: '/topics',
       component: TopicList,
     },
     {
       name: 'Topic',
-      path: '/my-blog/topics/topic',
+      path: '/topics/topic',
       component: BlogList,
     },
     {
       name: 'About Me',
-      path: '/my-blog/about-me',
+      path: '/about-me',
       component: AboutMe,
     },
   ],

@@ -1,6 +1,17 @@
 <template>
-  <div class="navbar">
-    <menu-item v-for="page in pages" :text="page" :key="page"></menu-item>
+  <div>
+    <div class="navbar">
+      <div class="container">
+        <img class="menu-image" src="../assets/images/menu.png" v-on:click="toggleMenu"/>
+        <div class="menu">
+          <menu-item v-for="page in pages" :text="page" :key="page"></menu-item>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-menu" :class="{ 'fade-out': !menuVisible }" v-if="menuVisible">
+      <i class="close-menu fa fa-times" v-on:click="toggleMenu"></i>
+      <menu-item v-for="page in pages" :text="page" :key="page"></menu-item>
+    </div>
   </div>
 </template>
 
@@ -9,27 +20,31 @@
   export default {
     name: "Menu",
     components: {MenuItem},
-    data () {
+    data() {
       return {
         pages: [
           'Home',
           'Blogs',
           'About Me',
-        ]
+        ],
+        menuVisible: false,
+      }
+    },
+    methods: {
+      toggleMenu() {
+        this.menuVisible = !this.menuVisible
+      }
+    },
+    watch: {
+      '$route' () {
+        if (this.menuVisible) {
+        this.toggleMenu()
+        }
       }
     }
   }
 </script>
 
-<style scoped>
-.navbar {
-  font-family: serendity;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  height: 45px;
-  line-height: 50px;
-  overflow: hidden;
-}
+<style scoped lang="scss">
+  @import "../assets/css/navbar";
 </style>

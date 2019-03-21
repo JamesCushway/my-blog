@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="blog-list">
-      <BlogListSnippet v-for="(image, index) in images" :image="image" :blog="blogs[index]" :key="index"></BlogListSnippet>
+      <BlogListSnippet v-for="(blog, index) in blogs" :blog="blog" :blogIndex="index" :key="index"></BlogListSnippet>
     </div>
   </div>
 
@@ -9,40 +9,13 @@
 
 <script>
   import BlogListSnippet from "../components/BlogSnippet"
+  import blogs from '../assets/javascript/blogs'
   export default {
     name: "BlogList",
     components: {BlogListSnippet},
     data () {
       return {
-        images: [
-          'blog.jpg',
-          'history.jpg',
-          'tech.jpg',
-          'travel.jpg',
-        ],
-        blogs: [
-          {
-            title: 'This is my blog title',
-            description: 'This will be a single sentence about the blog.',
-            date: '21st March 2019',
-          },
-          {
-            title: 'This is my blog title',
-            description: 'This will be a single sentence about the blog.',
-            date: '21st March 2019',
-          },
-          {
-            title: 'This is my blog title',
-            description: 'This will be a single sentence about the blog.',
-            date: '21st March 2019',
-          },
-          {
-            title: 'This is my blog title',
-            description: 'This will be a single sentence about the blog.',
-            date: '21st March 2019',
-          },
-
-        ]
+        blogs
       }
     }
   }

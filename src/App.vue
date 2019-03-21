@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <div class="container">
-      <Menu></Menu>
+    <Menu></Menu>
+    <div class="main-content">
+      <router-view></router-view>
     </div>
-    <router-view></router-view>
   </div>
 </template>
 
@@ -26,9 +26,39 @@ export default {
     font-family: Montserrat;
     src: url('./assets/fonts/Montserrat-ExtraLight.ttf'), url('./assets/fonts/Montserrat-ExtraLight.ttf') format('ttf');
   }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -20%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translate3d(0, 0%, 0);
+    }
+    to {
+      opacity: 0;
+      transform: translate3d(0, -20%, 0);
+    }
+  }
+
   #app {
     font-family: Montserrat, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    background-color: whitesmoke;
+  }
+
+  .main-content {
+    margin-top: 45px;
   }
 
 </style>

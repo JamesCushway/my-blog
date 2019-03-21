@@ -1,6 +1,9 @@
 <template>
   <router-link :to="{name: text}">
-    <div class="menu-item menu-item--white">{{text}}</div>
+    <div class="menu-item">
+      <i :class="`fa ${faMap[text]}`"></i>
+      {{text}}
+    </div>
   </router-link>
 
 </template>
@@ -10,19 +13,19 @@
     name: "MenuItem",
     props: {
       text: String,
+    },
+    data () {
+      return {
+        faMap: {
+          Home: 'fa-home',
+          Blogs: 'fa-book-open',
+          'About Me': 'fa-user',
+        }
+      }
     }
   }
 </script>
 
-<style scoped>
-  .menu-item {
-    float: left;
-    margin: 0 10px;
-    font-size: 20px;
-  }
-
-  .menu-item--white {
-    color: black;
-  }
-
+<style scoped lang="scss">
+  @import "../assets/css/navbar";
 </style>

@@ -1,31 +1,32 @@
 <template>
-  <div class="container">
+  <div class="blog">
     <div class="blog-header">
       <div class="blog-title">
         {{blog.title}}
       </div>
       <img class="full-width blog-image" :src="blog.image"/>
     </div>
-    <div class="blog blog-container">
-      <div class="blog-paragraph" v-for="(paragraph, index) in blog.paragraphs" :key="index">
-        {{paragraph}}
+      <div class="blog-container">
+        <div class="blog-paragraph" v-for="(paragraph, index) in blog.paragraphs" :key="index">
+          {{paragraph}}
+        </div>
       </div>
-    </div>
   </div>
 </template>
 
 <script>
-  import blog from '../assets/javascript/blogs/test-blog'
+  import blogs from '../assets/javascript/blogs'
   export default {
     name: "Blog",
     data () {
       return {
-        image: require('../assets/images/travel.jpg'),
+        image: '',
+        blog: {},
       }
     },
     created () {
-      this.blog = blog
-      this.blog.image = require('../assets/images/blog.jpg')
+      this.blog = { ...blogs[this.$route.params.blog] }
+      this.blog.image = require(`../assets/images/${this.blog.image}`)
     }
   }
 </script>

@@ -1,22 +1,18 @@
 .blog-snippet {
-  width: 90%;
+  width: 100%;
   height: 20%;
   overflow: hidden;
   margin: 10px auto;
   background-color: white;
+  border-radius: 3px;
 
   .image-container {
     width: 100%;
-    height: 10%;
     overflow: hidden;
 
     img {
       width: 100%;
-      height: 100%;
-      overflow: hidden;
-      -moz-transition: all 0.3s;
-      -webkit-transition: all 0.3s;
-      transition: all 0.3s;
+      height: auto;
     }
   }
 
@@ -38,21 +34,17 @@
     .blog-title {
       font-size: 12px;
       font-weight: 600;
+      cursor: pointer;
+      color: #333;
     }
 
     .blog-date {
       font-size: 10px;
     }
   }
-
-  &:hover .image-container img {
-    -webkit-filter:blur(2px);
-    filter: blur(2px) brightness(50%);
-    transform: scale(1.1);
-  }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 500px) {
   .blog-snippet {
     width: 48%;
   }
@@ -62,26 +54,51 @@
   .blog-snippet {
     width: 31%;
     margin: 1%;
-    max-height: 400px;
+
+    .information {
+      height: 100px;
+    }
+
+    .image-container {
+      max-height: calc(31vw * (9 / 16));
+      img {
+        -moz-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    }
+    &:hover .image-container img {
+      -webkit-filter:blur(2px);
+      filter: blur(2px) brightness(50%);
+      transform: scale(1.1);
+    }
+
+    &:hover .blog-title {
+      color: #666;
+    }
   }
 }
 
 @media only screen and (min-width: 1360px) {
   .blog-snippet {
-    height: 280px;
 
-    .image-container {
-      height: 150px;
+    .information {
+      .blog-title {
+        font-size: 13px;
+      }
+      .blog-description {
+        font-size: 13px;
+      }
+
     }
+
   }
 }
 
 @media only screen and (min-width: 1900px) {
-  .blog-snippet {
-    height: 350px;
-  }
 
-  .image-container {
-    height: 230px;
-  }
 }

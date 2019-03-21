@@ -1,6 +1,6 @@
 <template>
   <div class="blog-snippet">
-    <router-link :to="'/my-blog/blogs/' + blog.name">
+    <router-link :to="{ name: 'Blog', params: { blog: blogIndex }}">
       <div class="image-container">
         <img :src="imagePath"/>
       </div>
@@ -22,14 +22,16 @@
   export default {
     name: "BlogListSnippet",
     props: {
-      image: String,
       blog: Object,
-
+      blogIndex: Number,
     },
     data () {
       return {
-        imagePath: require(`../assets/images/${this.image}`),
+        imagePath: '',
       }
+    },
+    created() {
+      this.imagePath = require(`../assets/images/${this.blog.image}`)
     }
   }
 </script>
