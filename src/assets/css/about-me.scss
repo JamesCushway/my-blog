@@ -1,0 +1,30 @@
+.about-me {
+  .about-me-image {
+    width: 100%;
+    text-align: center;
+    img {
+      margin: 40px 0 20px 0;
+      width: 50%;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .about-me {
+    .about-me-image {
+      img {
+        width: 25%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1360px) {
+  .about-me {
+    .about-me-image {
+      img {
+        width: 20%;
+      }
+    }
+  }
+}

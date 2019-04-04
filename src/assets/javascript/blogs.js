@@ -1,52 +1,18 @@
-const blogs = [
-  {
-    name: 'a-test-blog',
-    title: 'A test blog',
-    description: 'A brief description about the blog.',
-    date: '21st March 2019',
-    image: 'travel.jpg',
+const blogs = {
+  'the-sensation-of-travelling': {
+    name: 'the-sensation-of-travelling',
+    title: 'The Sensation of Travelling',
+    description: 'A brief glimpse into my own experiences of travel.',
+    date: '4th April 2019',
+    image: 'travel.png',
     paragraphs: [
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-    ]
+      'I haven’t always been a traveller. That’s actually quite an understatement. Before the beginning of this year, I had never travelled outside of South Africa. Well, not entirely true either. My parents travelled to a few places with me when I was much younger, but I was much too young to appreciate the experience, nor do I remember much from it now. Nevertheless, at the beginning of the year, with just about no travelling experience, I made the decision to move to Paris, to throw myself into a new adventure filled with new cultures, histories and languages. And thus, my very first travelling expedition began.',
+      'Being in a new city so completely different from home is isolating in so many ways. Interacting can reach levels of difficulty and complexity that you didn’t even know were possible. Between the language barriers and cultural differences, one can quickly feel as though their understanding of social norms had broken down entirely and even more so, your perception of human emotions becomes largely distorted. It makes for very interesting interactions when you realise you have little to no social intuition. You find yourself questioning almost everything you do during a simple exchange. Occasionally, even something as trivial as ordering a coffee at a local cafe becomes a difficult and, at times, even an unpleasant experience.',
+      'Despite all of these unfamiliarities and potential unpleasantries, I have found the most of these experiences to be friendly and entertaining and sometimes even enlightening. I often treat these little exchanges as fun ways to practice my (very poor) French. It’s a funny thing walking into a bakery and simply ordering a baguette, only to be absolutely assaulted with the French language in response. There is not much more one can do but smile dumbly and say “Désolé, je comprand pas”. The experience of interacting with people of different languages and cultures can teach you so much. Slowly but surely, your social intuition redefines itself. With a little bit of patience, you begin to adapt and to understand.',
+      'Of course, with new places also comes new found knowledge. Through exploration and interaction, you learn and grow in more ways than you thought possible. As you begin to learn about new cultures and different histories, they impart on you a new found understanding and appreciation of the world and in the process of gaining better understanding of the world, so to you gain a better understanding of yourself, who you are and who you want to be. It is in these fleeting moments, filled with bursts of knowledge and emotions, that the boundaries of all that is you, your mind, heart and soul, are stretched to their limits. It is truly a marvellous and somewhat paradoxical process: the constant and occasionally violent clashing of emotions which bring about a deep sense of tranquillity and contentment. As far as my experience goes, there are few feelings quite like it.',
+      'Needless to say, the sensation of moving halfway across the world when you haven’t ever set foot outside of your home country is a very foreign one indeed. A somewhat indescribable mixture of thoughts and feelings all swirling around inside both your head and heart. The sadness of saying goodbye, the fear of the unknown, the deep loneliness that comes with unfamiliarity, the excitement of new horizons. All of these and more swirling around every minute of everyday. In any one moment they can be tearing you apart and the next, flooding you with endless hope and elation. It is as though one was caught a drift on a raft, in an ocean of ever changing and unpredictable tides. Fight it, and it becomes agonising, unbearable, potentially even hopeless. But accept it, and it becomes freeing, exhilarating and soulful. Fortunately I cannot quite say that I have ever been stuck on a raft in the middle of the ocean. Nevertheless, the experience of setting yourself adrift on the tides of the world is a momentous one indeed and I cannot say that I’ll ever look back.',
+    ],
   },
-  {
-    name: 'a-test-blog',
-    title: 'A test blog',
-    description: 'A brief description about the blog.',
-    date: '21st March 2019',
-    image: 'history.jpg',
-    paragraphs: [
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-    ]
-  },
-  {
-    name: 'a-test-blog',
-    title: 'A test blog',
-    description: 'A brief description about the blog.',
-    date: '21st March 2019',
-    image: 'tech.jpg',
-    paragraphs: [
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-    ]
-  },
-  {
-    name: 'a-test-blog',
-    title: 'A test blog',
-    description: 'A brief description about the blog.',
-    date: '21st March 2019',
-    image: 'blog.jpg',
-    paragraphs: [
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-    ]
-  }
-]
+}
 
 export default blogs

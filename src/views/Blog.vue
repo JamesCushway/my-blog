@@ -26,7 +26,7 @@
     },
     created () {
       this.blog = { ...blogs[this.$route.params.blog] }
-      this.blog.image = require(`../assets/images/${this.blog.image}`)
+      this.blog.image = require(`../assets/images/blogs/${this.blog.image}`)
     }
   }
 </script>

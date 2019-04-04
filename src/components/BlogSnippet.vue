@@ -31,7 +31,7 @@
       }
     },
     created() {
-      this.imagePath = require(`../assets/images/${this.blog.image}`)
+      this.imagePath = require(`../assets/images/blog-snippets/${this.blog.image}`)
     }
   }
 </script>

@@ -28,19 +28,16 @@
 }
 
 .blog-paragraph {
-  margin: 10px 0;
-  font-size: 14px;
+  margin: 20px 0;
+  font-size: 16px;
   color: #333;
-  font-weight: 600;
   line-height: 25px;
+  font-family: Charter;
 }
 
 @media only screen and (min-width: 768px) {
   .blog-container {
     width: 728px;
-  }
-  .blog-image {
-    height: 60vh;
   }
   .blog-title {
     font-size: 30px;
@@ -50,8 +47,7 @@
 
 @media only screen and (min-width: 1360px) {
   .blog-paragraph {
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 18px;
     line-height: 30px;
   }
 

@@ -4,6 +4,7 @@
     <div class="main-content">
       <router-view></router-view>
     </div>
+
   </div>
 </template>
 
@@ -25,6 +26,10 @@ export default {
   @font-face {
     font-family: Montserrat;
     src: url('./assets/fonts/Montserrat-ExtraLight.ttf'), url('./assets/fonts/Montserrat-ExtraLight.ttf') format('ttf');
+  }
+  @font-face {
+    font-family: Charter;
+    src: url('./assets/fonts/CHARI.ttf'), url('./assets/fonts/CHARI.ttf') format('ttf');
   }
 
   @keyframes fadeIn {
@@ -55,10 +60,13 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
     background-color: whitesmoke;
+    min-height: 100vh;
   }
 
   .main-content {
     margin-top: 45px;
+    position: relative;
+    min-height: calc(100vh - 45px);
   }
 
 </style>

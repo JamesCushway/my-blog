@@ -1,27 +1,33 @@
 <template>
-  <div class="container">
-    <img :src="image"/>
-    <p>
-      {{aboutMe}}
-    </p>
+  <div class="about-me">
+    <div class="about-me-image">
+      <img :src="aboutMe.image"/>
+    </div>
+    <div class="about-me-description blog-container">
+      <p v-for="paragraph in aboutMe.paragraphs">
+        {{ paragraph }}
+      </p>
+    </div>
   </div>
 </template>
 
 <script>
-  import {aboutMe} from "../assets/javascript/storage"
-
+  import aboutMe from '../assets/javascript/about-me'
   export default {
     name: "AboutMe",
     data () {
       return {
-        image: require('../assets/images/me.png'),
+        aboutMe: {},
       }
+    },
+    created () {
+      this.aboutMe = { ...aboutMe }
+      this.aboutMe.image = require(`../assets/images/${this.aboutMe.image}`)
     }
   }
 </script>
 
-<style scoped>
-  .container img {
-    width: 30%;
-  }
+<style scoped lang="scss">
+  @import "../assets/css/about-me.scss";
+  @import "../assets/css/blog";
 </style>

@@ -4,14 +4,20 @@
   position: relative;
   margin-bottom: 20px;
 
-  img {
+  .image-slider {
     height: 100%;
     width: 100%;
-    object-fit: cover;
     z-index: 0;
     position: relative;
-    filter: brightness(50%);
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      filter: brightness(50%);
+    }
   }
+
 
   span {
     font-family: serendity;

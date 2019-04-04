@@ -1,7 +1,11 @@
 <template>
   <div>
     <div class="homescreen-image">
-      <img :src="image"/>
+      <swiper :options="swiperOptions" class="image-slider">
+        <swiper-slide v-for="(image, index) in images" :key="index">
+          <img :src="image"/>
+        </swiper-slide>
+      </swiper>
       <span>The Life and Travels of a Spontaneous Adventurer.</span>
     </div>
     <div class="homescreen-blogs">
@@ -11,21 +15,34 @@
 </template>
 
 <script>
-
+  import 'swiper/dist/css/swiper.css'
+  import { swiper, swiperSlide } from 'vue-awesome-swiper'
   import BlogList from "./BlogList"
   export default {
     name: "HomeScreen",
     components: {
       BlogList,
+      swiper,
+      swiperSlide,
     },
     data () {
       return {
-        image: require('../assets/images/lake.jpg')
+        images: [
+          require('../assets/images/lake.jpg'),
+        ],
+        swiperOptions: {
+          // loop: true,
+          // autoplay: {
+          //   delay: 5000,
+          // },
+        }
       }
     },
-    created() {
-      window.history.pushState({}, '', '/my-blog')
+  computed: {
+    swiper() {
+      return this.$refs.mySwiper.swiper
     }
+  },
   }
 </script>
 
