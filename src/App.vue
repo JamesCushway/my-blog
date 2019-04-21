@@ -3,17 +3,19 @@
     <Menu></Menu>
     <div class="main-content">
       <router-view></router-view>
-    </div>
+      <Footer></Footer>
 
+    </div>
   </div>
 </template>
 
 <script>
 
 import Menu from "./components/NavBar"
+import Footer from "./components/Footer"
 export default {
   name: 'app',
-  components: {Menu},
+  components: {Footer, Menu},
 }
 </script>
 
@@ -66,7 +68,15 @@ export default {
   .main-content {
     margin-top: 45px;
     position: relative;
-    min-height: calc(100vh - 45px);
+    min-height: calc(100vh - 45px - 90px);
+    padding-bottom: 90px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .main-content {
+      margin-top: 55px;
+      min-height: calc(100vh - 55px - 90px);
+    }
   }
 
 </style>
