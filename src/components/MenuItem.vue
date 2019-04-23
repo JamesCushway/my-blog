@@ -1,6 +1,6 @@
 <template>
   <router-link :to="{name: text}">
-    <div class="menu-item">
+    <div class="menu-item" :class="{ selected, }">
       <i :class="`fa ${faMap[text]}`"></i>
       {{text}}
     </div>
@@ -22,7 +22,10 @@
           'About Me': 'fa-user',
         }
       }
-    }
+    },
+    computed: {
+      selected () { return this.$route.name === this.text }
+    },
   }
 </script>
 

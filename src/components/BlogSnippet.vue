@@ -23,7 +23,7 @@
     name: "BlogListSnippet",
     props: {
       blog: Object,
-      blogIndex: Number,
+      blogIndex: String,
     },
     data () {
       return {
