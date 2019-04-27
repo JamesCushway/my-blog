@@ -4,7 +4,7 @@
       <img :src="aboutMe.image"/>
     </div>
     <div class="about-me-description blog-container">
-      <p v-for="paragraph in aboutMe.paragraphs">
+      <p class="blog-paragraph" v-for="(paragraph, i) in aboutMe.paragraphs" :key="i">
         {{ paragraph }}
       </p>
     </div>
