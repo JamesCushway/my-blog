@@ -29,12 +29,14 @@
       return {
         images: [
           require('../assets/images/lake.jpg'),
+          require('../assets/images/blogs/history.png'),
+          require('../assets/images/blogs/travel.png'),
         ],
         swiperOptions: {
-          // loop: true,
-          // autoplay: {
-          //   delay: 5000,
-          // },
+          loop: true,
+          autoplay: {
+            delay: 5000,
+          },
         }
       }
     },
